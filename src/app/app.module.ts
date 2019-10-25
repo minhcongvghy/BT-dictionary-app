@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { DictionaryComponent } from './dictionary/dictionary.component';
 import { DictionaryDetailComponent } from './dictionary-detail/dictionary-detail.component';
 import { DictionaryPageComponent } from './dictionary-page/dictionary-page.component';
-import { HomeComponent } from './home/home.component';
+import {DictionaryService} from './dictionary.service';
 
 @NgModule({
   declarations: [
@@ -14,13 +14,12 @@ import { HomeComponent } from './home/home.component';
     DictionaryComponent,
     DictionaryDetailComponent,
     DictionaryPageComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DictionaryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

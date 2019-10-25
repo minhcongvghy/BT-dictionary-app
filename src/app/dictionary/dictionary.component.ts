@@ -9,16 +9,14 @@ import { DictionaryService, IWord } from '../dictionary.service';
 export class DictionaryComponent implements OnInit {
   word: IWord;
   constructor(private dictionaryService: DictionaryService) { }
-
-  ngOnInit() {
-  }
-
   search(word: string) {
     const meaning = this.dictionaryService.search(word);
     this.word = {
       key: word,
       meaning
     };
+  }
+  ngOnInit() {
   }
 
 }
